@@ -18,7 +18,7 @@ const app = express();
  */
 
 app.use(cors({
-  origin: "http://localhost:3001".split(",")
+  origin: config.ALLOWED_URL.split(",")
 }))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
